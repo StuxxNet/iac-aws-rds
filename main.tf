@@ -1,17 +1,3 @@
-resource "random_password" "this" {
-  # Random password for the database
-  length           = 16
-  special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
-}
-
-resource "aws_db_subnet_group" "this" {
-  # Network definition
-  count      = length(var.subnets)
-  name       = format("subnet-group-%s", var.rds_name)
-  subnet_ids = var.subnets
-}
-
 resource "aws_db_instance" "this" {
   # Database definition
   identifier           = format("%s-main", var.rds_name)
