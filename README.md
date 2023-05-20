@@ -7,6 +7,7 @@
 ## ToDos
 - [ ] Proxy (Aurora)
 - [ ] Security Groups
+- [ ] Enhanced Monitoring
 - [ ] Parameter Groups
 - [ ] Tags
 
